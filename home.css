@@ -1,0 +1,8 @@
+.bar {
+	height: 45px;
+	width: 300px;
+	text-align: center;
+	text-shadow: 1px 1px black;
+	color: black;
+	background-color: #ECB0DC;
+}
