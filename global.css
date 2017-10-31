@@ -1,0 +1,29 @@
+body {
+	font-family: Avenir, sans-serif;
+}
+
+.head-bar {
+	height: 10%;
+	text-align: center;
+	color: white;
+	background-color: #41B7F2;
+	font-size: 370%
+}
+
+.homebuttons{
+	text-align: center;
+	color: #41B7F2;
+	font-size: 200%;
+	border: 2px solid black;
+	margin: 20% 5% 20% 5%;
+	padding: 5% 0%;
+	border-radius: 25px;
+}
+
+.back-button {
+	max-height: 13%;
+	max-width: 13%;
+	position: absolute;
+	top: 0.5%;
+	left: 0.5%;
+}
