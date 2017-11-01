@@ -1,0 +1,47 @@
+<html>
+<header>
+	<title>SafeMap</title>
+	<link rel="stylesheet" type="text/css" href="global.css"/>
+</header>
+<body>
+	<div class="head-bar">
+		<a href="home.html">
+			<img class="back-button" src="images/back.png">
+		</a>
+		<h1>SafeMap</h1>
+	</div>
+	
+	<div class="question">
+	<h2> Are you safe? </h2>
+	</div>
+
+	<div>
+		<input type="range" min="0" max="5" step="1" list="steplist" value="5" id="slider">
+		<datalist id="steplist">
+			<option>0</option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</datalist>
+		<br>
+	</div>
+	<div class="labels">
+		<span id="level">0</span>
+		<span id="level">1</span>
+		<span id="level">2</span>
+		<span id="level">3</span>
+		<span id="level">4</span>
+		<span id="level2">5</span>
+	</div>
+
+	<input type="text" placeholder="OPTIONAL: Add info of describe your situation" id="details">
+	
+	<a href="home.html">
+		<button class="submit">Submit</button>
+	</a>
+
+</body>
+<script src="home.js" </script>
+	</html>
