@@ -2,6 +2,11 @@ body {
 	font-family: Avenir, sans-serif;
 }
 
+h2 {
+	text-align: center;
+	font-size: 500%;
+}
+
 .head-bar {
 	height: 10%;
 	text-align: center;
@@ -38,4 +43,44 @@ body {
 
 #search-bar {
 	font-size: 300%;
+}
+
+
+
+/* Report Page */
+
+#slider{
+	width: 80%;
+	margin: 10% 10% 0% 10%;
+}
+
+#details{
+	width: 80%;
+	height: 30%;
+	margin: 10%;
+	border-style: solid;
+	border-width: 2px;
+}
+
+.submit{
+	margin: 10%;
+	height: 10%;
+	width: 80%
+}
+
+#level{
+	margin-right: 14.9%;
+	font-size: 30px;
+}
+
+#level2{
+	font-size: 30px;
+}
+
+.labels{
+	margin-left: 10%;
+}
+
+.question {
+	margin-top: 10%;
 }
