@@ -7,6 +7,12 @@ h3 {
 	font-size: 500%;
 }
 
+p {
+	text-align: center;
+	font-size: 175%;
+	color: gray;
+}
+
 .head-bar {
 	height: 10%;
 	text-align: center;
@@ -20,17 +26,19 @@ h3 {
 	color: #41B7F2;
 	font-size: 200%;
 	border: 2px solid black;
-	margin: 20% 5% 20% 5%;
+	margin: 20% 5% 2% 5%;
 	padding: 5% 0%;
 	border-radius: 25px;
 }
 
 .back-button {
-	max-height: 13%;
-	max-width: 13%;
-	position: absolute;
-	top: 0.5%;
-	left: 0.5%;
+	max-height: 70%;
+	max-width: 70%;
+	float: left;
+	border: 4px solid white;
+	position: relative;
+	left: 15px;
+	top: 22px;
 }
 
 #map {
