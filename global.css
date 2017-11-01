@@ -2,7 +2,7 @@ body {
 	font-family: Avenir, sans-serif;
 }
 
-h2 {
+h3 {
 	text-align: center;
 	font-size: 500%;
 }
@@ -48,13 +48,21 @@ h2 {
 	height: 30%;
 	margin: 10%;
 	border-style: solid;
-	border-width: 2px; 
+	border-width: 2px;
+	font-size: 200%; 
 }
 
 .submit{
-	margin: 10%;
-	height: 10%;
-	width: 80%
+	width: 80%;
+    margin: 10% 10%;
+	background-color: #41B7F2;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 200%;
+    padding: 5% 0%;
 }
 
 #level{
