@@ -27,3 +27,15 @@ body {
 	top: 0.5%;
 	left: 0.5%;
 }
+
+#map {
+	padding: 5%;
+}
+
+#map img {
+	width: 100%;
+}
+
+#search-bar {
+	font-size: 300%;
+}
