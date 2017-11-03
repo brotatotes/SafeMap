@@ -5,27 +5,30 @@
    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </header>
    <body>
+       <script src="map.js"></script>
 	   <div class="head-bar">
            <a href="home.html">
                <img class="back-button" src="images/back.png">
            </a>
-	       <h1>SafeMap</h1>
-	   </div>
+           <h1>SafeMap</h1>
+        </div>
 
-       <div id="search-bar">
+        <div id="search-bar">
            <form>
                Search:
-               <div class="search-box">
+               <div id="search-box">
                    <input class="textbox" type="text" />
                </div>
-                   <img class="search-button" src="images/search.png">
-                   <!-- link this search image to a "submit" -->
+               <button onclick="search()">
+                   <img id="search-button" src="images/search.png">
+               </button>
+               <!-- link this search image to a "submit" -->
            </form>
-       </div>
+        </div>
 
-       <div id="map">
+        <div id="map">
            <img src="images/map1.png"/>
-       </div>
-   </body>
-   <script src="home.js" </script>
+        </div>
+    </body>
+
 </html>

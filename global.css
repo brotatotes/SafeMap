@@ -56,7 +56,7 @@ p {
 	left: 25px;
 }
 
-.search-box {
+#search-box {
 	display: inline;
 }
 
@@ -66,7 +66,7 @@ p {
 	width: 600px;
 }
 
-.search-button {
+#search-button {
 	width: 70px;
 	height: 70px;
 	border: 1px solid black;
@@ -90,7 +90,7 @@ p {
 	margin: 10%;
 	border-style: solid;
 	border-width: 2px;
-	font-size: 300%; 
+	font-size: 300%;
 	border-radius: 15px;
 	padding-bottom: 420px;
 	padding-left: 15px;
