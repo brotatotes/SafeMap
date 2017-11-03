@@ -9,7 +9,7 @@ h3 {
 
 p {
 	text-align: center;
-	font-size: 195%;
+	font-size: 25px;
 	color: gray;
 }
 
@@ -24,10 +24,9 @@ p {
 .homebuttons{
 	text-align: center;
 	color: #41B7F2;
-	font-size: 200%;
+	font-size: 300%;
 	border: 2px solid black;
 	margin: 20% 5% 2% 5%;
-	padding: 5% 0%;
 	border-radius: 25px;
 }
 
