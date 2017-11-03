@@ -5,19 +5,21 @@ var pinCrises = ["Earthquake", "Earthquake", "Fire"]
 var pins = [] // initialize pins (HTML elements)
 var n = 3
 
-function search(text) {
-    var results = []
+function search() {
+    var text = document.getElementById("search-box");
+    console.log(text);
+    var results = [];
     var t = text.toLowerCase();
     for (var i = 0; i < n; i++) {
-        var data = [pinNames[i], pinAddrs[i], pinDescs[i], pinCrises[i]]
-        data = data.map((x) => x.toLowerCase().indexOf(t) != -1)
+        var data = [pinNames[i], pinAddrs[i], pinDescs[i], pinCrises[i]];
+        data = data.map((x) => x.toLowerCase().indexOf(t) != -1);
         if data.includes(true) {
-            results.push(i)
+            results.push(i);
         }
     }
 
     results.forEach((i) => {
         // do something with pins in HTML
-        console.log(i)
+        console.log(i);
     })
 }
