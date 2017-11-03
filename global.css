@@ -52,7 +52,9 @@ p {
 
 #search-bar {
 	font-size: 400%;
-	float: right;
+	float: left;
+	position: relative;
+	left: 25px;
 }
 
 .search-box {
@@ -62,7 +64,7 @@ p {
 .textbox {
 	border: 2px solid black;
 	font-size: 80%;
-	width: 250px;
+	width: 600px;
 }
 
 .search-button {
@@ -73,7 +75,7 @@ p {
 	margin: 5px;
 	position: relative;
 	top: 20px;
-	right: 15px;
+	right: 10px;
 }
 
 /* Report Page */
