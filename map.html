@@ -3,10 +3,10 @@
    <title>SafeMap</title>
    <link rel="stylesheet" type="text/css" href="global.css"/>
    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<!--    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
    <script src="data.json" type="text/javascript"></script>
    <script type="text/javascript" src="markerclusterer.js"></script>
-   <script src="map.js"></script>
+   <script src="map.js"></script> -->
 </header>
 <body onload="speedTest.init();">
     <div class="head-bar">
@@ -29,34 +29,121 @@
         </form>
      </div>
 
-     <!-- <div id="map">
-        <img src="images/map1.png"/>
-     </div> -->
-  <!-- <div id="panel">
+<div id="map-canvas"></div>
+<select id="type" onchange="filterMarkers(this.value);">
+    <option value="">Please select category</option>
+    <option value="second">second</option>
+    <option value="car">car</option>
+    <option value="third">third</option>
+</select>
+    <div id="map"></div>
+    <script>
+      // This example creates circles on the map, representing populations in North
+      // America.
 
-    <div>
-      <input type="checkbox" checked="checked" id="usegmm"/>
-      <span>FILTER MARKERS</span>
-    </div>
+      // First, create an object containing LatLng and population for each city.
+      var citymap = {
+        chicago: {
+          center: {lat: 41.878, lng: -87.629},
+          population: 2714856
+        },
+        newyork: {
+          center: {lat: 40.714, lng: -74.005},
+          population: 8405837
+        },
+        losangeles: {
+          center: {lat: 34.052, lng: -118.243},
+          population: 3857799
+        },
+        vancouver: {
+          center: {lat: 49.25, lng: -123.1},
+          population: 603502
+        }
+      };
 
-    <div>
-      Markers:
-      <select id="nummarkers">
-        <option value="10">10</option>
-        <option value="50">50</option>
-        <option value="100" selected="selected">100</option>
-        <option value="500">500</option>
-        <option value="1000">1000</option>
-      </select>
+      function initMap() {
+        // Create the map.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: {lat: 41.045597, lng: 1-87.688568},
+          mapTypeId: 'terrain'
+        });
+		var marker = new google.maps.Marker({
+          position: {lat: 41.045597, lng: 1-87.688568},
+          map: map,
+          title: 'Cyclone Affected Area!'
+        });
+		var marker = new google.maps.Marker({
+          position: {lat: 41.155597, lng: 1-87.888568},
+          map: map,
+          title: 'Cyclone Affected Area!'
+        });
+		var marker = new google.maps.Marker({
+          position: {lat: 41.155597, lng: 1-87.988568},
+          map: map,
+          title: 'Cyclone Affected Area!'
+        });
 
-      <span>Time used: <span id="timetaken"></span> ms</span>
-    </div>
+		var marker = new google.maps.Marker({
+          position: {lat: 41.155597, lng: 1-88.888568},
+          map: map,
+          title: 'Cyclone Affected Area!'
+        });
 
-    <strong>TYPE OF PINS</strong>
-    <div id="markerlist">
+		var marker = new google.maps.Marker({
+          position: {lat: 42.155597, lng: 1-86.888568},
+          map: map,
+          title: 'Cyclone Affected Area!'
+        });
+		var marker = new google.maps.Marker({
+          position: {lat: 42.045597, lng: 1-87.688568},
+          map: map,
+          title: 'Cyclone Affected Area!'
+        });
+		var marker = new google.maps.Marker({
+          position: {lat: 40.155597, lng: 1-85.888568},
+          map: map,
+          title: 'Cyclone Affected Area!'
+        });
+		var marker = new google.maps.Marker({
+          position: {lat: 41.155597, lng: 1-86.988568},
+          map: map,
+          title: 'Cyclone Affected Area!'
+        });
 
-    </div>
-  </div> -->
+		var marker = new google.maps.Marker({
+          position: {lat: 44.155597, lng: 1-89.888568},
+          map: map,
+          title: 'Cyclone Affected Area!'
+        });
+
+		var marker = new google.maps.Marker({
+          position: {lat: 43.155597, lng: 1-85.888568},
+          map: map,
+          title: 'Cyclone Affected Area!'
+        });
+
+
+        // Construct the circle for each value in citymap.
+        // Note: We scale the area of the circle based on the population.
+        for (var city in citymap) {
+          // Add the circle for this city to the map.
+          var cityCircle = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map: map,
+            center: citymap[city].center,
+            radius: Math.sqrt(citymap[city].population) * 100
+          });
+        }
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBncVsCB4GYyoncW9KTnL72DWTKmWzNsbo&callback=initMap">
+    </script>
   <div id="map-container">
     <div id="map"></div>
   </div>
