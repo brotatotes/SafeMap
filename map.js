@@ -5,21 +5,36 @@ var pinCrises = ["Earthquake", "Earthquake", "Fire"]
 var pins = [] // initialize pins (HTML elements)
 var n = 3
 
+// document.getElementById("search-button").addEventListener("click", search);
+
 function search() {
-    var text = document.getElementById("search-box");
-    console.log(text);
+    console.clear();
+
+    var text = document.getElementById("search-text-box").value;
     var results = [];
     var t = text.toLowerCase();
     for (var i = 0; i < n; i++) {
         var data = [pinNames[i], pinAddrs[i], pinDescs[i], pinCrises[i]];
-        data = data.map((x) => x.toLowerCase().indexOf(t) != -1);
-        if data.includes(true) {
+        data = data.map((x) => t != "" && x.toLowerCase().indexOf(t) != -1);
+        if (data.includes(true)) {
             results.push(i);
         }
     }
 
-    results.forEach((i) => {
-        // do something with pins in HTML
-        console.log(i);
-    })
+    if (results.length == 0) {
+        console.log("No results found.\n")
+    } else {
+        if (results.length == 1) {
+            console.log(results.length + " result found!\n\n");
+        } else {
+            console.log(results.length + " result found!\n\n");
+        }
+
+        results.forEach((i) => {
+            // do something with pins in HTML
+            console.log(pinNames[i] + " experiencing " + pinCrises[i] + " at " + pinAddrs[i] + ":");
+            console.log(pinDescs[i]);
+            console.log("\n");
+        })
+    }
 }

@@ -14,13 +14,13 @@
         </div>
 
         <div id="search-bar">
-           <form>
+           <form onsubmit="search(); return false;">
                Search:
                <div id="search-box">
-                   <input class="textbox" type="text" />
+                   <input id="search-text-box" class="textbox" type="text" />
                </div>
-               <button onclick="search()">
-                   <img id="search-button" src="images/search.png">
+               <button type="button" id="search-button" onclick="search()">
+                   <img class="search-button-img" src="images/search.png">
                </button>
                <!-- link this search image to a "submit" -->
            </form>

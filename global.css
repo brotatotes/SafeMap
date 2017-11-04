@@ -66,7 +66,7 @@ p {
 	width: 600px;
 }
 
-#search-button {
+.search-button-img {
 	width: 70px;
 	height: 70px;
 	border: 1px solid black;
