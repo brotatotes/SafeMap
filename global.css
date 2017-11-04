@@ -91,11 +91,6 @@ p {
 
 
 
-
-
-
-
-
 /* slider colors */
 
 .range {
@@ -246,13 +241,6 @@ input[type=range]::-moz-range-thumb:active {
 	position: relative;
 	top: 20px;
 	right: 10px;
-}
-
-body {
-	margin: 0;
-	padding: 0;
-	font-family: Arial;
-	font-size: 14px;
 }
 
 #panel {
