@@ -3,32 +3,65 @@
    <title>SafeMap</title>
    <link rel="stylesheet" type="text/css" href="global.css"/>
    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+   <script src="data.json" type="text/javascript"></script>
+   <script type="text/javascript" src="markerclusterer.js"></script>
+   <script src="map.js"></script>
 </header>
-   <body>
-       <script src="map.js"></script>
-	   <div class="head-bar">
-           <a href="home.html">
-               <img class="back-button" src="images/back.png">
-           </a>
-           <h1>SafeMap</h1>
-        </div>
+<body onload="speedTest.init();">
+    <div class="head-bar">
+        <a href="home.html">
+            <img class="back-button" src="images/back.png">
+        </a>
+        <h1>SafeMap</h1>
+    </div>
 
-        <div id="search-bar">
-           <form onsubmit="search(); return false;">
-               Search:
-               <div id="search-box">
-                   <input id="search-text-box" class="textbox" type="text" />
-               </div>
-               <button type="button" id="search-button" onclick="search()">
-                   <img class="search-button-img" src="images/search.png">
-               </button>
-               <!-- link this search image to a "submit" -->
-           </form>
-        </div>
+     <div id="search-bar">
+        <form onsubmit="search(); return false;">
+            Search:
+            <div id="search-box">
+                <input id="search-text-box" class="textbox" type="text" />
+            </div>
+            <button type="button" id="search-button" onclick="search()">
+                <img class="search-button-img" src="images/search.png">
+            </button>
 
-        <div id="map">
-           <img src="images/map1.png"/>
-        </div>
-    </body>
+        </form>
+     </div>
+
+     <!-- <div id="map">
+        <img src="images/map1.png"/>
+     </div> -->
+  <!-- <div id="panel">
+
+    <div>
+      <input type="checkbox" checked="checked" id="usegmm"/>
+      <span>FILTER MARKERS</span>
+    </div>
+
+    <div>
+      Markers:
+      <select id="nummarkers">
+        <option value="10">10</option>
+        <option value="50">50</option>
+        <option value="100" selected="selected">100</option>
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+      </select>
+
+      <span>Time used: <span id="timetaken"></span> ms</span>
+    </div>
+
+    <strong>TYPE OF PINS</strong>
+    <div id="markerlist">
+
+    </div>
+  </div> -->
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+</body>
+
+
 
 </html>
