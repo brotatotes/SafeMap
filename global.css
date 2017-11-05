@@ -42,11 +42,6 @@ p {
 
 /* Report Page */
 
-#slider{
-	width: 80%;
-	margin: 10% 10% 0% 10%;
-}
-
 #details{
 	width: 80%;
 	height: 30%;
@@ -96,12 +91,9 @@ p {
 .range {
   -webkit-appearance: none;
   -moz-appearance: none;
-  position: absolute;
-  left: 50%;
-  top: 50%;
   width: 80%;
   margin-top: 10px;
-  transform: translate(-50%, -50%);
+  margin-left: 10%;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
