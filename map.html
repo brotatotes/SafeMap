@@ -2,29 +2,39 @@
 <header>
    <title>SafeMap</title>
    <link rel="stylesheet" type="text/css" href="global.css"/>
+   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+   <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBncVsCB4GYyoncW9KTnL72DWTKmWzNsbo&libraries=visualization&callback=initMap">
+   </script>
+   <script src="map.js"></script>
 </header>
-   <body>
-	   <div class="head-bar">
-           <a href="home.html">
-               <img class="back-button" src="images/back.png">
-           </a>
-	       <h1>SafeMap</h1>
-	   </div>
+<body>
+    <div class="head-bar">
+        <a href="home.html">
+            <img class="back-button" src="images/back.png">
+        </a>
+        <h1>SafeMap</h1>
+    </div>
 
-       <div id="search-bar">
-           <form>
-               Search:
-               <div class="search-box">
-                   <input class="textbox" type="text" />
-               </div>
-                   <img class="search-button" src="images/search.png">
-                   <!-- link this search image to a "submit" -->
-           </form>
-       </div>
+     <div id="search-bar">
+        <form onsubmit="search(); return false;">
+            Search:
+            <div id="search-box">
+                <input id="search-text-box" class="textbox" type="text" />
+            </div>
+            <button type="button" id="search-button" onclick="search()">
+                <img class="search-button-img" src="images/search.png">
+            </button>
 
-       <div id="map">
-           <img src="images/map1.png"/>
-       </div>
-   </body>
-   <script src="home.js" </script>
+        </form>
+     </div>
+
+<div id="map-canvas"></div>
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+</body>
+
+
+
 </html>
