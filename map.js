@@ -80,12 +80,12 @@ function initMap() {
     pinPopups = [new google.maps.InfoWindow(), new google.maps.InfoWindow(), new google.maps.InfoWindow()];
 
     var marker1 = new google.maps.Marker({
-        position: {lat: 42.03, lng: -87.7},
+        position: {lat: 42.028, lng: -87.702},
         map: map,
     });
 
     var marker2 = new google.maps.Marker({
-        position: {lat: 42.028, lng: -87.707},
+        position: {lat: 42.032, lng: -87.705},
         map: map,
     });
 
@@ -131,6 +131,10 @@ function initMap() {
         data: getPoints(),
         map: map
     });
+
+    heatmap2 = new google.maps.visualization.HeatmapLayer({
+        data: []
+    })
 
     heatmap.set('radius', 100);
     heatmap.setMap(map);
@@ -298,6 +302,6 @@ function getPoints() {
     // }
     points.push([42.028, -87.702])
     points.push([42.032, -87.705])
-    points.push([42.035, -87.705])
+    points.push([42.0451, -87.6877])
     return points.map((x) => new google.maps.LatLng(x[0], x[1]));
 }
