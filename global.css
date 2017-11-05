@@ -215,8 +215,11 @@ input[type=range]::-moz-range-thumb:active {
 
 .textbox {
 	border: 2px solid black;
-	font-size: 80%;
+	font-size: 50%;
 	width: 600px;
+	padding: 10px 0px 10px 10px;
+	position: relative;
+	top: -10px;
 }
 
 .search-button-img {
