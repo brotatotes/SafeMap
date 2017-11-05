@@ -45,7 +45,7 @@ function search() {
 }
 
 function getText(i) {
-    return '<div>' + pinNames[i] + " experiencing " + pinCrises[i] + " at " + pinAddrs[i] + ":<br/>" + pinDescs[i] + '</div>';
+    return pinNames[i] + " experiencing " + pinCrises[i] + " at " + pinAddrs[i] + ":<br/>" + pinDescs[i];
 }
 
 var citymap = {
@@ -75,20 +75,22 @@ function initMap() {
         mapTypeId: 'terrain'
     });
 
+    // pins
+
     pinPopups = [new google.maps.InfoWindow(), new google.maps.InfoWindow(), new google.maps.InfoWindow()];
 
     var marker1 = new google.maps.Marker({
-        position: {lat: 42.0451, lng: -87.6877},
-        map: map,
-    });
-
-    var marker2 = new google.maps.Marker({
         position: {lat: 42.03, lng: -87.7},
         map: map,
     });
 
-    var marker3 = new google.maps.Marker({
+    var marker2 = new google.maps.Marker({
         position: {lat: 42.028, lng: -87.707},
+        map: map,
+    });
+
+    var marker3 = new google.maps.Marker({
+        position: {lat: 42.0451, lng: -87.6877},
         map: map,
     });
 
@@ -123,6 +125,15 @@ function initMap() {
             pinPopups[2].open(map, pins[2]);
         }
     });
+
+    // heatmap
+    heatmap = new google.maps.visualization.HeatmapLayer({
+        data: getPoints(),
+        map: map
+    });
+
+    heatmap.set('radius', 100);
+    heatmap.setMap(map);
   }
 
 /**
@@ -274,3 +285,19 @@ speedTest.time = function() {
   var end = new Date();
   $('timetaken').innerHTML = end - start;
 };
+
+// This example requires the Visualization library. Include the libraries=visualization
+// parameter when you first load the API. For example:
+// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization">
+
+// Heatmap data: 500 Points
+function getPoints() {
+    points = []
+    // for (var i = 0; i < 50; i++) {
+    //     points.push(new google.maps.LatLng(42 + i/10, -87.2 + i/10));
+    // }
+    points.push([42.028, -87.702])
+    points.push([42.032, -87.705])
+    points.push([42.035, -87.705])
+    return points.map((x) => new google.maps.LatLng(x[0], x[1]));
+}
