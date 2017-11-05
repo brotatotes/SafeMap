@@ -37,7 +37,7 @@ function search() {
             pinPopups[i].setContent(getText(i));
             pinPopups[i].open(map, pins[i]);
         } else {
-            if (pinPopups[i]) {
+            if (pinPopups[i].getMap()) {
                 pinPopups[i].close();
             }
         }
