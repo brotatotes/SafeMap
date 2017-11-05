@@ -3,6 +3,7 @@ var pinAddrs = ["1117 Foster Street", "992 Main Street", "1234 Pine Dr."]
 var pinDescs = ["My arm got cut under a falling branch.", "My dog ran away after the accident. My leg is broken too.", "My house is on fire. Need help now."]
 var pinCrises = ["Earthquake", "Earthquake", "Fire"]
 var pins = [] // initialize pins (HTML elements)
+var pinPopups = [];
 var n = 3
 
 // document.getElementById("search-button").addEventListener("click", search);
@@ -29,15 +30,100 @@ function search() {
         } else {
             console.log(results.length + " result found!\n\n");
         }
+    }
 
-        results.forEach((i) => {
-            // do something with pins in HTML
-            console.log(pinNames[i] + " experiencing " + pinCrises[i] + " at " + pinAddrs[i] + ":");
-            console.log(pinDescs[i]);
-            console.log("\n");
-        })
+    for (var i = 0; i < n; i++) {
+        if (results.includes(i)) {
+            pinPopups[i].setContent(getText(i));
+            pinPopups[i].open(map, pins[i]);
+        } else {
+            if (pinPopups[i]) {
+                pinPopups[i].close();
+            }
+        }
     }
 }
+
+function getText(i) {
+    return '<div>' + pinNames[i] + " experiencing " + pinCrises[i] + " at " + pinAddrs[i] + ":<br/>" + pinDescs[i] + '</div>';
+}
+
+var citymap = {
+  chicago: {
+    center: {lat: 41.878, lng: -87.629},
+    population: 2714856
+  },
+  newyork: {
+    center: {lat: 40.714, lng: -74.005},
+    population: 8405837
+  },
+  losangeles: {
+    center: {lat: 34.052, lng: -118.243},
+    population: 3857799
+  },
+  vancouver: {
+    center: {lat: 49.25, lng: -123.1},
+    population: 603502
+  }
+};
+
+function initMap() {
+    // Create the map.
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14,
+        center: {lat: 42.0451, lng: -87.6877},
+        mapTypeId: 'terrain'
+    });
+
+    pinPopups = [new google.maps.InfoWindow(), new google.maps.InfoWindow(), new google.maps.InfoWindow()];
+
+    var marker1 = new google.maps.Marker({
+        position: {lat: 42.0451, lng: -87.6877},
+        map: map,
+    });
+
+    var marker2 = new google.maps.Marker({
+        position: {lat: 42.03, lng: -87.7},
+        map: map,
+    });
+
+    var marker3 = new google.maps.Marker({
+        position: {lat: 42.028, lng: -87.707},
+        map: map,
+    });
+
+    pins = [marker1, marker2, marker3];
+
+    pins[0].addListener('click', function() {
+        if (pinPopups[0].getMap()) {
+            pinPopups[0].close();
+        } else {
+            pinPopups[0].setContent(getText(0));
+            pinPopups[0].setContent(pinPopups[0].getContent());
+            pinPopups[0].open(map, pins[0]);
+        }
+    });
+
+    pins[1].addListener('click', function() {
+        if (pinPopups[1].getMap()) {
+            pinPopups[1].close();
+        } else {
+            pinPopups[1].setContent(getText(1));
+            pinPopups[1].setContent(pinPopups[1].getContent());
+            pinPopups[1].open(map, pins[1]);
+        }
+    });
+
+    pins[2].addListener('click', function() {
+        if (pinPopups[2].getMap()) {
+            pinPopups[2].close();
+        } else {
+            pinPopups[2].setContent(getText(2));
+            pinPopups[2].setContent(pinPopups[2].getContent());
+            pinPopups[2].open(map, pins[2]);
+        }
+    });
+  }
 
 /**
  * @fileoverview This demo is used for MarkerClusterer. It will show 100 markers
