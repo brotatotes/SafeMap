@@ -148,5 +148,8 @@ function getPoints() {
     points.push([42.028, -87.702])
     points.push([42.032, -87.705])
     points.push([42.0451, -87.6877])
+	points.push([42.018, -87.602])
+    points.push([42.012, -87.505])
+    points.push([42.0351, -87.6577])
     return points.map((x) => new google.maps.LatLng(x[0], x[1]));
 }
