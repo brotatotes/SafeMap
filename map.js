@@ -48,24 +48,7 @@ function getText(i) {
     return pinNames[i] + " experiencing " + pinCrises[i] + " at " + pinAddrs[i] + ":<br/>" + pinDescs[i];
 }
 
-var citymap = {
-  chicago: {
-    center: {lat: 41.878, lng: -87.629},
-    population: 2714856
-  },
-  newyork: {
-    center: {lat: 40.714, lng: -74.005},
-    population: 8405837
-  },
-  losangeles: {
-    center: {lat: 34.052, lng: -118.243},
-    population: 3857799
-  },
-  vancouver: {
-    center: {lat: 49.25, lng: -123.1},
-    population: 603502
-  }
-};
+
 
 function initMap() {
     // Create the map.
@@ -93,8 +76,57 @@ function initMap() {
         position: {lat: 42.0451, lng: -87.6877},
         map: map,
     });
+    var marker4 = new google.maps.Marker({
+        position: {lat: 42.0441, lng: -87.6777},
+        map: map,
+    });
+    
+    
+    
+    
+    var marker5 = new google.maps.Marker({
+        position: {lat: 42.038, lng: -87.692},
+        map: map,
+    });
 
-    pins = [marker1, marker2, marker3];
+    var marker6 = new google.maps.Marker({
+        position: {lat: 42.042, lng: -87.695},
+        map: map,
+    });
+
+    var marker7 = new google.maps.Marker({
+        position: {lat: 42.042, lng: -87.685},
+        map: map,
+    });
+    var marker8 = new google.maps.Marker({
+        position: {lat: 42.0441, lng: -87.685},
+        map: map,
+    });
+    
+    
+    
+    var marker9 = new google.maps.Marker({
+        position: {lat: 42.032, lng: -87.695},
+        map: map,
+    });
+
+    var marker10 = new google.maps.Marker({
+        position: {lat: 42.032, lng: -87.691},
+        map: map,
+    });
+
+    var marker11 = new google.maps.Marker({
+        position: {lat: 42.035, lng: -87.682},
+        map: map,
+    });
+    var marker12 = new google.maps.Marker({
+        position: {lat: 42.040, lng: -87.675},
+        map: map,
+    });
+    
+
+ 
+    pins = [marker1, marker2, marker3,marker4, marker5, marker6, marker7,marker8,marker9, marker10, marker11,marker12];
 
     pins[0].addListener('click', function() {
         if (pinPopups[0].getMap()) {
@@ -125,7 +157,99 @@ function initMap() {
             pinPopups[2].open(map, pins[2]);
         }
     });
+    pins[3].addListener('click', function() {
+        if (pinPopups[3].getMap()) {
+            pinPopups[3].close();
+        } else {
+            pinPopups[3].setContent(getText(3));
+            pinPopups[3].setContent(pinPopups[3].getContent());
+            pinPopups[3].open(map, pins[3]);
+        }
+    });
+    
+    pins[4].addListener('click', function() {
+        if (pinPopups[4].getMap()) {
+            pinPopups[4].close();
+        } else {
+            pinPopups[4].setContent(getText(4));
+            pinPopups[4].setContent(pinPopups[4].getContent());
+            pinPopups[4].open(map, pins[4]);
+        }
+    });
 
+    pins[5].addListener('click', function() {
+        if (pinPopups[5].getMap()) {
+            pinPopups[5].close();
+        } else {
+            pinPopups[5].setContent(getText(5));
+            pinPopups[5].setContent(pinPopups[5].getContent());
+            pinPopups[5].open(map, pins[5]);
+        }
+    });
+    pins[6].addListener('click', function() {
+        if (pinPopups[6].getMap()) {
+            pinPopups[6].close();
+        } else {
+            pinPopups[6].setContent(getText(6));
+            pinPopups[6].setContent(pinPopups[6].getContent());
+            pinPopups[6].open(map, pins[6]);
+        }
+    });
+    
+        pins[10].addListener('click', function() {
+        if (pinPopups[10].getMap()) {
+            pinPopups[10].close();
+        } else {
+            pinPopups[10].setContent(getText(10));
+            pinPopups[10].setContent(pinPopups[10].getContent());
+            pinPopups[10].open(map, pins[10]);
+        }
+    });
+    pins[11].addListener('click', function() {
+        if (pinPopups[11].getMap()) {
+            pinPopups[11].close();
+        } else {
+            pinPopups[11].setContent(getText(11));
+            pinPopups[11].setContent(pinPopups[11].getContent());
+            pinPopups[11].open(map, pins[11]);
+        }
+    });
+    
+    
+    
+        pins[7].addListener('click', function() {
+        if (pinPopups[7].getMap()) {
+            pinPopups[7].close();
+        } else {
+            pinPopups[7].setContent(getText(7));
+            pinPopups[7].setContent(pinPopups[7].getContent());
+            pinPopups[7].open(map, pins[7]);
+        }
+    });
+
+    pins[8].addListener('click', function() {
+        if (pinPopups[8].getMap()) {
+            pinPopups[8].close();
+        } else {
+            pinPopups[8].setContent(getText(8));
+            pinPopups[8].setContent(pinPopups[8].getContent());
+            pinPopups[8].open(map, pins[8]);
+        }
+    });
+    pins[9].addListener('click', function() {
+        if (pinPopups[9].getMap()) {
+            pinPopups[9].close();
+        } else {
+            pinPopups[9].setContent(getText(9));
+            pinPopups[9].setContent(pinPopups[9].getContent());
+            pinPopups[9].open(map, pins[9]);
+        }
+    });
+    
+    
+    
+    
+    
     // heatmap
     heatmap = new google.maps.visualization.HeatmapLayer({
         data: getPoints(),
@@ -145,11 +269,18 @@ function getPoints() {
     // for (var i = 0; i < 50; i++) {
     //     points.push(new google.maps.LatLng(42 + i/10, -87.2 + i/10));
     // }
+    points.push([42.038, -87.692])
+    points.push([42.042, -87.695])
+    points.push([42.042, -87.685])
+    points.push([42.046, -87.685])
+    points.push([42.032, -87.695])
+    points.push([42.032, -87.691])
+    points.push([42.035, -87.682])
+    points.push([42.040, -87.675])
     points.push([42.028, -87.702])
     points.push([42.032, -87.705])
     points.push([42.0451, -87.6877])
-	points.push([42.018, -87.602])
-    points.push([42.012, -87.505])
-    points.push([42.0351, -87.6577])
+    points.push([42.0441, -87.6777])
+
     return points.map((x) => new google.maps.LatLng(x[0], x[1]));
 }
