@@ -335,6 +335,8 @@ input[type=range]::-moz-range-thumb:active {
 #list .listitembox {
 	border: 2px solid black;
 	padding: 0px 10px;
+	position: relative;
+	top: 120px;
 }
 
 /* submit toast notification */
