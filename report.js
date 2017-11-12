@@ -13,3 +13,13 @@ function updateSlider(value) {
     var sliderTip = document.getElementById("sliderTip");
     sliderTip.innerHTML = sliderText[value];
 }
+
+
+function toastNotification() {
+    var x = document.getElementById("snackbar")
+    x.className = "show";
+    setTimeout(function(){
+        x.className = x.className.replace("show", "");
+        window.location.href = "home.html";
+    }, 2000);
+}

@@ -1,12 +1,80 @@
-var pinNames = ["Joe Shmoe", "Bob Smith", "Lucy Goosey"]
-var pinAddrs = ["1117 Foster Street", "992 Main Street", "1234 Pine Dr."]
-var pinDescs = ["My arm got cut under a falling branch.", "My dog ran away after the accident. My leg is broken too.", "My house is on fire. Need help now."]
-var pinCrises = ["Earthquake", "Earthquake", "Fire"]
-var pins = [] // initialize pins (HTML elements)
+var pinNames = [
+"Alex Friedman", 
+"Karen Hsu", 
+"Eric Hao", 
+"Suman Maroju", 
+"Barack Obama", 
+"Donald Trump", 
+"George Bush", 
+"George Washington", 
+"Ronald Raegan", 
+"Teddy Roosevelt", 
+"James Carter", 
+"Thomas Jefferson", 
+"Andrew Jackson", 
+"Abe Lincoln", 
+"John Kennedy"
+];
+
+var pinAddrs = [
+"1117 Foster Street", 
+"992 Main Street", 
+"1234 Pine Drive", 
+"112 First Street", 
+"281 Second Street", 
+"104 Third Street", 
+"933 Oak Place", 
+"100 Sheridan Road", 
+"399 Capstone Street", 
+"1533 Brook Avenue", 
+"387 Water Way", 
+"99 Dane Street", 
+"15 Money Lane", 
+"9 Fast Drive", 
+"8765 Birch Lane"];
+
+var pinDescs = [
+"My arm got cut under a falling branch.", 
+"My dog ran away after the accident. My leg is broken too.", 
+"My house is on fire. Need help now.", 
+"I'm totally fine", 
+"My roof collapsed, but I'm safe.", 
+"My cat scratched me", 
+"I've fallen and I can't get up. I shoulda bought a life alert.", 
+"My brother is on fire right now", 
+"My dog became a cat and my cat became a hamster during the flood.", 
+"I'm just hungry and Dominoes is closed from the flood",
+"House is flooding",
+"I'm dehydrated and have no clean water",
+"Half my house collapsed and I can't find my grandma",
+"My popcorn caught on fire and now my kitchen is on fire",
+"No damage. I'm all good."
+];
+
+var pinCrises = [
+"needs medical assistance", 
+"needs medical assistance",
+"needs the fire department",
+"is safe",
+"experienced property damage",
+"needs medical assistance",
+"needs medical assistance",
+"needs the fire department",
+"experienced property damage",
+"needs food and water",
+"experienced property damage",
+"needs food and water",
+"experienced property damage",
+"needs the fire department",
+"is safe"
+];
+
+var pins = []; // initialize pins (HTML elements)
 var pinPopups = [];
-var n = 3
-var lats = [42.028, 42.033, 42.0451, 42.0441, 42.038, 42.038, 42.032, 42.035, 42.039, 42.025, 42.027, 42.033, 42.040, 42.042, 42.037]
-var lons = [-87.702, -87.705, -87.687, -87.677, -87.692, -87.695, -87.691, -87.681, -87.655, -87.699, -87.709, -87.695, -87.700, -87.682, -87.663]
+var n = pinNames.length;
+console.log(n);
+var lats = [42.028, 42.033, 42.0451, 42.0441, 42.038, 42.038, 42.032, 42.035, 42.039, 42.025, 42.027, 42.033, 42.040, 42.032, 42.035];
+var lons = [-87.702, -87.705, -87.687, -87.677, -87.692, -87.695, -87.691, -87.681, -87.691, -87.699, -87.709, -87.695, -87.700, -87.682, -87.700];
 
 // document.getElementById("search-button").addEventListener("click", search);
 
@@ -30,7 +98,7 @@ function search() {
         if (results.length == 1) {
             console.log(results.length + " result found!\n\n");
         } else {
-            console.log(results.length + " results found!\n\n");
+            console.log(results.length + " result found!\n\n");
         }
     }
 
@@ -47,10 +115,8 @@ function search() {
 }
 
 function getText(i) {
-    return pinNames[i] + " experiencing " + pinCrises[i] + " at " + pinAddrs[i] + ":<br/>" + pinDescs[i];
+    return pinNames[i] + " " + pinCrises[i] + " at " + pinAddrs[i] + ":<br/>" + pinDescs[i];
 }
-
-
 
 function initMap() {
     // Create the map.
@@ -61,8 +127,9 @@ function initMap() {
     });
 
     // pins
-
-    pinPopups = [new google.maps.InfoWindow(), new google.maps.InfoWindow(), new google.maps.InfoWindow()];
+    for (var i=0; i < n; i++) {
+        pinPopups.push(new google.maps.InfoWindow())
+    };
 
     var marker1 = new google.maps.Marker({
         position: {lat: lats[0], lng: lons[0]},
@@ -112,8 +179,20 @@ function initMap() {
         position: {lat: lats[11], lng: lons[11]},
         map: map,
     });
-
-    pins = [marker1, marker2, marker3, marker4, marker5, marker6, marker7, marker8, marker9, marker10, marker11, marker12];
+    var marker13 = new google.maps.Marker({
+        position: {lat: lats[12], lng: lons[12]},
+        map: map,
+    });
+    var marker14 = new google.maps.Marker({
+        position: {lat: lats[13], lng: lons[13]},
+        map: map,
+    });
+    var marker15 = new google.maps.Marker({
+        position: {lat: lats[14], lng: lons[14]},
+        map: map,
+    });
+    
+    pins = [marker1, marker2, marker3, marker4, marker5, marker6, marker7, marker8, marker9, marker10, marker11, marker12, marker13, marker14, marker15];
 
     pins[0].addListener('click', function() {
         if (pinPopups[0].getMap()) {
@@ -178,24 +257,6 @@ function initMap() {
             pinPopups[6].open(map, pins[6]);
         }
     });
-    pins[10].addListener('click', function() {
-        if (pinPopups[10].getMap()) {
-            pinPopups[10].close();
-        } else {
-            pinPopups[10].setContent(getText(10));
-            pinPopups[10].setContent(pinPopups[10].getContent());
-            pinPopups[10].open(map, pins[10]);
-        }
-    });
-    pins[11].addListener('click', function() {
-        if (pinPopups[11].getMap()) {
-            pinPopups[11].close();
-        } else {
-            pinPopups[11].setContent(getText(11));
-            pinPopups[11].setContent(pinPopups[11].getContent());
-            pinPopups[11].open(map, pins[11]);
-        }
-    });
     pins[7].addListener('click', function() {
         if (pinPopups[7].getMap()) {
             pinPopups[7].close();
@@ -222,8 +283,52 @@ function initMap() {
             pinPopups[9].setContent(pinPopups[9].getContent());
             pinPopups[9].open(map, pins[9]);
         }
+    }); 
+    pins[10].addListener('click', function() {
+        if (pinPopups[10].getMap()) {
+            pinPopups[10].close();
+        } else {
+            pinPopups[10].setContent(getText(10));
+            pinPopups[10].setContent(pinPopups[10].getContent());
+            pinPopups[10].open(map, pins[10]);
+        }
     });
-
+    pins[11].addListener('click', function() {
+        if (pinPopups[11].getMap()) {
+            pinPopups[11].close();
+        } else {
+            pinPopups[11].setContent(getText(11));
+            pinPopups[11].setContent(pinPopups[11].getContent());
+            pinPopups[11].open(map, pins[11]);
+        }
+    });    
+    pins[12].addListener('click', function() {
+        if (pinPopups[12].getMap()) {
+            pinPopups[12].close();
+        } else {
+            pinPopups[12].setContent(getText(12));
+            pinPopups[12].setContent(pinPopups[12].getContent());
+            pinPopups[12].open(map, pins[12]);
+        }
+    });
+    pins[13].addListener('click', function() {
+        if (pinPopups[13].getMap()) {
+            pinPopups[13].close();
+        } else {
+            pinPopups[13].setContent(getText(13));
+            pinPopups[13].setContent(pinPopups[13].getContent());
+            pinPopups[13].open(map, pins[13]);
+        }
+    });
+    pins[14].addListener('click', function() {
+        if (pinPopups[14].getMap()) {
+            pinPopups[14].close();
+        } else {
+            pinPopups[14].setContent(getText(14));
+            pinPopups[14].setContent(pinPopups[14].getContent());
+            pinPopups[14].open(map, pins[14]);
+        }
+    }); 
 
     // heatmap
     heatmap = new google.maps.visualization.HeatmapLayer({
@@ -252,6 +357,10 @@ function getPoints() {
     points.push([lats[9], lons[9]])
     points.push([lats[10], lons[10]])
     points.push([lats[11], lons[11]])
+    points.push([lats[12], lons[12]])
+    points.push([lats[13], lons[13]])
+    points.push([lats[14], lons[14]])
+
 
     return points.map((x) => new google.maps.LatLng(x[0], x[1]));
 }
