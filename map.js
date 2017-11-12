@@ -28,7 +28,7 @@ function search() {
         if (results.length == 1) {
             console.log(results.length + " result found!\n\n");
         } else {
-            console.log(results.length + " result found!\n\n");
+            console.log(results.length + " results found!\n\n");
         }
     }
 
@@ -80,10 +80,10 @@ function initMap() {
         position: {lat: 42.0441, lng: -87.6777},
         map: map,
     });
-    
-    
-    
-    
+
+
+
+
     var marker5 = new google.maps.Marker({
         position: {lat: 42.038, lng: -87.692},
         map: map,
@@ -102,9 +102,9 @@ function initMap() {
         position: {lat: 42.0441, lng: -87.685},
         map: map,
     });
-    
-    
-    
+
+
+
     var marker9 = new google.maps.Marker({
         position: {lat: 42.032, lng: -87.695},
         map: map,
@@ -123,9 +123,9 @@ function initMap() {
         position: {lat: 42.040, lng: -87.675},
         map: map,
     });
-    
 
- 
+
+
     pins = [marker1, marker2, marker3,marker4, marker5, marker6, marker7,marker8,marker9, marker10, marker11,marker12];
 
     pins[0].addListener('click', function() {
@@ -166,7 +166,7 @@ function initMap() {
             pinPopups[3].open(map, pins[3]);
         }
     });
-    
+
     pins[4].addListener('click', function() {
         if (pinPopups[4].getMap()) {
             pinPopups[4].close();
@@ -195,7 +195,7 @@ function initMap() {
             pinPopups[6].open(map, pins[6]);
         }
     });
-    
+
         pins[10].addListener('click', function() {
         if (pinPopups[10].getMap()) {
             pinPopups[10].close();
@@ -214,9 +214,9 @@ function initMap() {
             pinPopups[11].open(map, pins[11]);
         }
     });
-    
-    
-    
+
+
+
         pins[7].addListener('click', function() {
         if (pinPopups[7].getMap()) {
             pinPopups[7].close();
@@ -245,11 +245,11 @@ function initMap() {
             pinPopups[9].open(map, pins[9]);
         }
     });
-    
-    
-    
-    
-    
+
+
+
+
+
     // heatmap
     heatmap = new google.maps.visualization.HeatmapLayer({
         data: getPoints(),
