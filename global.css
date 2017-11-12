@@ -298,3 +298,23 @@ input[type=range]::-moz-range-thumb:active {
 .gm-style .gm-style-iw {
    font-size: 24px;
 }
+
+
+/* report.html slider tooltips */
+.tooltip {
+	display: flex;
+	justify-content: center;
+    border-bottom: 1px dotted black;
+}
+
+.tooltiptext {
+	font-size: 38px;
+	padding: 15px;
+}
+
+.tooltip .tooltiptext {
+    background-color: #41B7F2;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+}

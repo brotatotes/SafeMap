@@ -17,8 +17,15 @@
 	<h3> Are you safe? </h3>
 	</div>
 
+	<div class="tooltip">
+		<span id="sliderTip" class="tooltiptext">I require immediate assistance</span>
+	</div>
+
+	<br/>
+
+
 	<div>
-		<input type="range" min="0" max="5" step="1" list="steplist" value="5" id="slider" class="range blue">
+		<input onchange="updateSlider(this.value)" type="range" min="0" max="5" step="1" list="steplist" value="5" id="slider" class="range blue">
 		<datalist id="steplist">
 			<option>0</option>
 			<option>1</option>
