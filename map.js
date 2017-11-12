@@ -5,6 +5,8 @@ var pinCrises = ["Earthquake", "Earthquake", "Fire"]
 var pins = [] // initialize pins (HTML elements)
 var pinPopups = [];
 var n = 3
+var lats = [42.028, 42.033, 42.0451, 42.0441, 42.038, 42.038, 42.032, 42.035, 42.039, 42.025, 42.027, 42.033, 42.040, 42.042, 42.037]
+var lons = [-87.702, -87.705, -87.687, -87.677, -87.692, -87.695, -87.691, -87.681, -87.655, -87.699, -87.709, -87.695, -87.700, -87.682, -87.663]
 
 // document.getElementById("search-button").addEventListener("click", search);
 
@@ -63,70 +65,55 @@ function initMap() {
     pinPopups = [new google.maps.InfoWindow(), new google.maps.InfoWindow(), new google.maps.InfoWindow()];
 
     var marker1 = new google.maps.Marker({
-        position: {lat: 42.028, lng: -87.702},
+        position: {lat: lats[0], lng: lons[0]},
         map: map,
     });
-
     var marker2 = new google.maps.Marker({
-        position: {lat: 42.032, lng: -87.705},
+        position: {lat: lats[1], lng: lons[1]},
         map: map,
     });
-
     var marker3 = new google.maps.Marker({
-        position: {lat: 42.0451, lng: -87.6877},
+        position: {lat: lats[2], lng: lons[2]},
         map: map,
     });
     var marker4 = new google.maps.Marker({
-        position: {lat: 42.0441, lng: -87.6777},
+        position: {lat: lats[3], lng: lons[3]},
         map: map,
     });
-    
-    
-    
-    
     var marker5 = new google.maps.Marker({
-        position: {lat: 42.038, lng: -87.692},
+        position: {lat: lats[4], lng: lons[4]},
         map: map,
     });
-
     var marker6 = new google.maps.Marker({
-        position: {lat: 42.042, lng: -87.695},
+        position: {lat: lats[5], lng: lons[5]},
         map: map,
     });
-
     var marker7 = new google.maps.Marker({
-        position: {lat: 42.042, lng: -87.685},
+        position: {lat: lats[6], lng: lons[6]},
         map: map,
     });
     var marker8 = new google.maps.Marker({
-        position: {lat: 42.0441, lng: -87.685},
+        position: {lat: lats[7], lng: lons[7]},
         map: map,
     });
-    
-    
-    
     var marker9 = new google.maps.Marker({
-        position: {lat: 42.032, lng: -87.695},
+        position: {lat: lats[8], lng: lons[8]},
         map: map,
     });
-
     var marker10 = new google.maps.Marker({
-        position: {lat: 42.032, lng: -87.691},
+        position: {lat: lats[9], lng: lons[9]},
         map: map,
     });
-
     var marker11 = new google.maps.Marker({
-        position: {lat: 42.035, lng: -87.682},
+        position: {lat: lats[10], lng: lons[10]},
         map: map,
     });
     var marker12 = new google.maps.Marker({
-        position: {lat: 42.040, lng: -87.675},
+        position: {lat: lats[11], lng: lons[11]},
         map: map,
     });
     
-
- 
-    pins = [marker1, marker2, marker3,marker4, marker5, marker6, marker7,marker8,marker9, marker10, marker11,marker12];
+    pins = [marker1, marker2, marker3, marker4, marker5, marker6, marker7, marker8, marker9, marker10, marker11, marker12];
 
     pins[0].addListener('click', function() {
         if (pinPopups[0].getMap()) {
@@ -137,7 +124,6 @@ function initMap() {
             pinPopups[0].open(map, pins[0]);
         }
     });
-
     pins[1].addListener('click', function() {
         if (pinPopups[1].getMap()) {
             pinPopups[1].close();
@@ -147,7 +133,6 @@ function initMap() {
             pinPopups[1].open(map, pins[1]);
         }
     });
-
     pins[2].addListener('click', function() {
         if (pinPopups[2].getMap()) {
             pinPopups[2].close();
@@ -166,7 +151,6 @@ function initMap() {
             pinPopups[3].open(map, pins[3]);
         }
     });
-    
     pins[4].addListener('click', function() {
         if (pinPopups[4].getMap()) {
             pinPopups[4].close();
@@ -176,7 +160,6 @@ function initMap() {
             pinPopups[4].open(map, pins[4]);
         }
     });
-
     pins[5].addListener('click', function() {
         if (pinPopups[5].getMap()) {
             pinPopups[5].close();
@@ -195,8 +178,7 @@ function initMap() {
             pinPopups[6].open(map, pins[6]);
         }
     });
-    
-        pins[10].addListener('click', function() {
+    pins[10].addListener('click', function() {
         if (pinPopups[10].getMap()) {
             pinPopups[10].close();
         } else {
@@ -213,11 +195,8 @@ function initMap() {
             pinPopups[11].setContent(pinPopups[11].getContent());
             pinPopups[11].open(map, pins[11]);
         }
-    });
-    
-    
-    
-        pins[7].addListener('click', function() {
+    });    
+    pins[7].addListener('click', function() {
         if (pinPopups[7].getMap()) {
             pinPopups[7].close();
         } else {
@@ -226,7 +205,6 @@ function initMap() {
             pinPopups[7].open(map, pins[7]);
         }
     });
-
     pins[8].addListener('click', function() {
         if (pinPopups[8].getMap()) {
             pinPopups[8].close();
@@ -244,10 +222,7 @@ function initMap() {
             pinPopups[9].setContent(pinPopups[9].getContent());
             pinPopups[9].open(map, pins[9]);
         }
-    });
-    
-    
-    
+    }); 
     
     
     // heatmap
@@ -255,32 +230,28 @@ function initMap() {
         data: getPoints(),
         map: map
     });
-
     heatmap2 = new google.maps.visualization.HeatmapLayer({
         data: []
     })
 
     heatmap.set('radius', 100);
     heatmap.setMap(map);
-  }
+}
 
 function getPoints() {
     points = []
-    // for (var i = 0; i < 50; i++) {
-    //     points.push(new google.maps.LatLng(42 + i/10, -87.2 + i/10));
-    // }
-    points.push([42.038, -87.692])
-    points.push([42.042, -87.695])
-    points.push([42.042, -87.685])
-    points.push([42.046, -87.685])
-    points.push([42.032, -87.695])
-    points.push([42.032, -87.691])
-    points.push([42.035, -87.682])
-    points.push([42.040, -87.675])
-    points.push([42.028, -87.702])
-    points.push([42.032, -87.705])
-    points.push([42.0451, -87.6877])
-    points.push([42.0441, -87.6777])
+    points.push([lats[0], lons[0]])
+    points.push([lats[1], lons[1]])
+    points.push([lats[2], lons[2]])
+    points.push([lats[3], lons[3]])
+    points.push([lats[4], lons[4]])
+    points.push([lats[5], lons[5]])
+    points.push([lats[6], lons[6]])
+    points.push([lats[7], lons[7]])
+    points.push([lats[8], lons[8]])
+    points.push([lats[9], lons[9]])
+    points.push([lats[10], lons[10]])
+    points.push([lats[11], lons[11]])
 
     return points.map((x) => new google.maps.LatLng(x[0], x[1]));
 }
