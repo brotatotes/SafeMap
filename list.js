@@ -34,6 +34,10 @@ function searchList() {
     console.clear();
 
     var text = document.getElementById("search-text-box").value;
+    if (!text) {
+        init();
+        return;
+    }
     var results = [];
     var t = text.toLowerCase();
     for (var i = 0; i < n; i++) {
