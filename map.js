@@ -7,7 +7,7 @@ var pinNames = [
 "Donald Trump", 
 "George Bush", 
 "George Washington", 
-"Ronald Raegan", 
+"Ronald Reagan", 
 "Teddy Roosevelt", 
 "James Carter", 
 "Thomas Jefferson", 
@@ -72,7 +72,6 @@ var pinCrises = [
 var pins = []; // initialize pins (HTML elements)
 var pinPopups = [];
 var n = pinNames.length;
-console.log(n);
 var lats = [42.028, 42.033, 42.0451, 42.0441, 42.038, 42.038, 42.032, 42.035, 42.039, 42.025, 42.027, 42.033, 42.040, 42.032, 42.035];
 var lons = [-87.702, -87.705, -87.687, -87.677, -87.692, -87.695, -87.691, -87.681, -87.691, -87.699, -87.709, -87.695, -87.700, -87.682, -87.700];
 
@@ -98,7 +97,7 @@ function search() {
         if (results.length == 1) {
             console.log(results.length + " result found!\n\n");
         } else {
-            console.log(results.length + " result found!\n\n");
+            console.log(results.length + " results found!\n\n");
         }
     }
 
