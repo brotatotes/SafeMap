@@ -3,9 +3,29 @@
 	<title>SafeMap</title>
 	<link rel="stylesheet" type="text/css" href="global.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<script src="map.js"></script>
 	<script src="list.js"></script>
 </header>
 <body>
-	
+	<div class="head-bar">
+		<a href="home.html">
+			<img class="back-button" src="images/back.png">
+		</a>
+		<h1>SafeMap</h1>
+	</div>
+
+	<div id="search-bar">
+	   <form onsubmit="searchList(); return false;">
+		   Search:
+		   <div id="search-box">
+			   <input id="search-text-box" class="textbox" type="text" placeholder="Filter reports by keyword"/>
+		   </div>
+		   <button type="button" id="search-button" onclick="search()">
+			   <img class="search-button-img" src="images/search.png">
+		   </button>
+	   </form>
+	</div>
+
+	<div id="list"/>
 </body>
 </html>

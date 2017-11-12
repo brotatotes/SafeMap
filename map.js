@@ -118,8 +118,6 @@ function getText(i) {
     return pinNames[i] + " " + pinCrises[i] + " at " + pinAddrs[i] + ":<br/>" + pinDescs[i];
 }
 
-
-
 function initMap() {
     // Create the map.
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -331,8 +329,7 @@ function initMap() {
             pinPopups[14].open(map, pins[14]);
         }
     }); 
-    
-    
+
     // heatmap
     heatmap = new google.maps.visualization.HeatmapLayer({
         data: getPoints(),
