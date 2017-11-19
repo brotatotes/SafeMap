@@ -1,94 +1,94 @@
 var pinNames = [
-"Alex Friedman", 
-"Karen Hsu", 
-"Eric Hao", 
-"Suman Maroju", 
-"Barack Obama", 
-"Donald Trump", 
-"George Bush", 
-"George Washington", 
-"Ronald Reagan", 
-"Teddy Roosevelt", 
-"James Carter", 
-"Thomas Jefferson", 
-"Andrew Jackson", 
-"Abe Lincoln", 
+"Alex Friedman",
+"Karen Hsu",
+"Eric Hao",
+"Suman Maroju",
+"Barack Obama",
+"Donald Trump",
+"George Bush",
+"George Washington",
+"Ronald Reagan",
+"Teddy Roosevelt",
+"James Carter",
+"Thomas Jefferson",
+"Andrew Jackson",
+"Abe Lincoln",
 "John Kennedy",
-"John Davis", 
-"William Jones", 
-"James Miller", 
-"Thomas Taylor", 
-"Peter King", 
-"Issac Harris", 
-"Robert Scot", 
-"Sangrin Cook", 
-"Marry Reagan", 
-"Sarah White", 
-"Maria Carter", 
-"Julia Martin", 
-"Emily Baker", 
-"Amanda Hill", 
+"John Davis",
+"William Jones",
+"James Miller",
+"Thomas Taylor",
+"Peter King",
+"Issac Harris",
+"Robert Scot",
+"Sangrin Cook",
+"Marry Reagan",
+"Sarah White",
+"Maria Carter",
+"Julia Martin",
+"Emily Baker",
+"Amanda Hill",
 "Anna Young"
 ];
 
 var pinAddrs = [
-"1117 Foster Street", 
-"992 Main Street", 
-"1234 Pine Drive", 
-"112 First Street", 
-"281 Second Street", 
-"104 Third Street", 
-"933 Oak Place", 
-"100 Sheridan Road", 
-"399 Capstone Street", 
-"1533 Brook Avenue", 
-"387 Water Way", 
-"99 Dane Street", 
-"15 Money Lane", 
-"9 Fast Drive", 
+"1117 Foster Street",
+"992 Main Street",
+"1234 Pine Drive",
+"112 First Street",
+"281 Second Street",
+"104 Third Street",
+"933 Oak Place",
+"100 Sheridan Road",
+"399 Capstone Street",
+"1533 Brook Avenue",
+"387 Water Way",
+"99 Dane Street",
+"15 Money Lane",
+"9 Fast Drive",
 "8765 Birch Lane",
-"1118 Foster Street", 
-"993 Main Street", 
-"1235 Pine Drive", 
-"113 First Street", 
-"282 Second Street", 
-"105 Third Street", 
-"934 Oak Place", 
-"101 Sheridan Road", 
-"398 Capstone Street", 
-"1532 Brook Avenue", 
-"386 Water Way", 
-"98 Dane Street", 
-"14 Money Lane", 
-"8 Fast Drive", 
+"1118 Foster Street",
+"993 Main Street",
+"1235 Pine Drive",
+"113 First Street",
+"282 Second Street",
+"105 Third Street",
+"934 Oak Place",
+"101 Sheridan Road",
+"398 Capstone Street",
+"1532 Brook Avenue",
+"386 Water Way",
+"98 Dane Street",
+"14 Money Lane",
+"8 Fast Drive",
 "8764 Birch Lane"
 ];
 
 var pinDescs = [
-"My arm got cut under a falling branch.", 
-"My dog ran away after the accident. My leg is broken too.", 
-"My house is on fire. Need help now.", 
-"I'm totally fine", 
-"My roof collapsed, but I'm safe.", 
-"My cat scratched me", 
-"I've fallen and I can't get up. I shoulda bought a life alert.", 
-"My brother is on fire right now", 
-"My dog became a cat and my cat became a hamster during the flood.", 
+"My arm got cut under a falling branch.",
+"My dog ran away after the accident. My leg is broken too.",
+"My house is on fire. Need help now.",
+"I'm totally fine",
+"My roof collapsed, but I'm safe.",
+"My cat scratched me",
+"I've fallen and I can't get up. I shoulda bought a life alert.",
+"My brother is on fire right now",
+"My dog became a cat and my cat became a hamster during the flood.",
 "I'm just hungry and Dominoes is closed from the flood",
 "House is flooding",
 "I'm dehydrated and have no clean water",
 "Half my house collapsed and I can't find my grandma",
 "My popcorn caught on fire and now my kitchen is on fire",
 "No damage. I'm all good.",
-"My Leg got cut under a falling branch.", 
-"My cat ran away after the accident. My hand is broken too.", 
-"My apartment is on fire. Need help now.", 
-"I'm totally fine", 
-"My building collapsed, but I'm safe.", 
-"My dog scratched me", 
-"I've fallen and I can't get up. I should bought a life alert.", 
-"My grandma is on fire right now", 
-"My cat became a dog and my cat became a hamster during the flood.", 
+"My Leg got cut under a falling branch.",
+"My cat ran away after the accident. My hand is broken too.",
+"My apartment is on fire. Need help now.",
+"I'm totally fine",
+"My building collapsed, but I'm safe.",
+"My dog scratched me",
+"I've fallen and I can't get up. I should bought a life alert.",
+"My grandma is on fire right now",
+"My cat became a dog and my cat became a hamster during the flood.",
 "I'm just hungry and Dominoes is closed from the flood",
 "House is flooding",
 "I'm dehydrated and have no clean water",
@@ -98,7 +98,7 @@ var pinDescs = [
 ];
 
 var pinCrises = [
-"needs medical assistance", 
+"needs medical assistance",
 "needs medical assistance",
 "needs the fire department",
 "is safe",
@@ -113,7 +113,7 @@ var pinCrises = [
 "experienced property damage",
 "needs the fire department",
 "is safe",
-"needs medical assistance", 
+"needs medical assistance",
 "needs medical assistance",
 "needs the fire department",
 "is safe",
@@ -200,7 +200,7 @@ var pinColor = "FE7569";
     //     map: map,
     //     //icon: pinImage,
     //     //animation: google.maps.Animation.DROP,
-    //     //icon: iconBase + 'parking_lot_maps.png' 
+    //     //icon: iconBase + 'parking_lot_maps.png'
     //     icon: iconBase + 'orange-dot.png'
     // });
 
@@ -225,7 +225,7 @@ var pinColor = "FE7569";
         position: {lat: lats[1], lng: lons[1]},
         map: map,
         icon: iconBase + 'hospitals.png',
-        
+
     });
     var marker3 = new google.maps.Marker({
         position: {lat: lats[2], lng: lons[2]},
@@ -311,7 +311,7 @@ var pinColor = "FE7569";
         position: {lat: lats[16], lng: lons[16]},
         map: map,
         icon: iconBase + 'hospitals.png',
-        
+
     });
     var marker18 = new google.maps.Marker({
         position: {lat: lats[17], lng: lons[17]},
@@ -382,7 +382,7 @@ var pinColor = "FE7569";
     });
 
 
-    
+
     pins = [marker1, marker2, marker3, marker4, marker5, marker6, marker7, marker8, marker9, marker10, marker11, marker12, marker13, marker14, marker15,  marker16, marker17, marker18, marker19, marker20, marker21, marker22, marker23, marker24, marker25, marker26, marker27, marker28, marker29, marker30];
 
     pins[0].addListener('click', function() {
@@ -474,7 +474,7 @@ var pinColor = "FE7569";
             pinPopups[9].setContent(pinPopups[9].getContent());
             pinPopups[9].open(map, pins[9]);
         }
-    }); 
+    });
     pins[10].addListener('click', function() {
         if (pinPopups[10].getMap()) {
             pinPopups[10].close();
@@ -492,7 +492,7 @@ var pinColor = "FE7569";
             pinPopups[11].setContent(pinPopups[11].getContent());
             pinPopups[11].open(map, pins[11]);
         }
-    });    
+    });
     pins[12].addListener('click', function() {
         if (pinPopups[12].getMap()) {
             pinPopups[12].close();
@@ -519,7 +519,7 @@ var pinColor = "FE7569";
             pinPopups[14].setContent(pinPopups[14].getContent());
             pinPopups[14].open(map, pins[14]);
         }
-    }); 
+    });
 
 
 
@@ -613,7 +613,7 @@ var pinColor = "FE7569";
             pinPopups[24].setContent(pinPopups[24].getContent());
             pinPopups[24].open(map, pins[24]);
         }
-    }); 
+    });
     pins[25].addListener('click', function() {
         if (pinPopups[25].getMap()) {
             pinPopups[25].close();
@@ -631,7 +631,7 @@ var pinColor = "FE7569";
             pinPopups[26].setContent(pinPopups[26].getContent());
             pinPopups[26].open(map, pins[26]);
         }
-    });    
+    });
     pins[27].addListener('click', function() {
         if (pinPopups[27].getMap()) {
             pinPopups[27].close();
@@ -658,26 +658,29 @@ var pinColor = "FE7569";
             pinPopups[29].setContent(pinPopups[29].getContent());
             pinPopups[29].open(map, pins[29]);
         }
-    }); 
+    });
 
 
 	var legend = document.getElementById('legend');
+
 	 var div = document.createElement('div');
 	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/firedept.png' + '"> ' + 'Fire Accident';
 	 legend.appendChild(div);
+
 	 var div = document.createElement('div');
 	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/hospitals.png' + '"> ' + 'Medical Emergency';
      legend.appendChild(div);
+
 	 var div = document.createElement('div');
 	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/landmarks-jp.png' + '"> ' + 'House Collapse';
 	 legend.appendChild(div);
-	 //var div = document.createElement('div');
-	 //div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/snack_bar.png' + '"> ' + 'Food-Water Demand';
+
 	 var div = document.createElement('div');
 	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/snack_bar.png' + '"> ' + 'Food-Water Shortage';
-	 //var div = document.createElement('div');
-	 //div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/rangerstation.png' + '"> ' + 'Safe';
-	 
+     legend.appendChild(div);
+
+	 var div = document.createElement('div');
+	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/rangerstation.png' + '"> ' + 'Safe';
      legend.appendChild(div);
  /*       for (var key in icons) {
           var type = icons[key];
@@ -686,11 +689,11 @@ var pinColor = "FE7569";
           var div = document.createElement('div');
           div.innerHTML = '<img src="' + icon + '"> ' + name;
           legend.appendChild(div);
-		 
+
         }*/
 
         map.controls[google.maps.ControlPosition.RIGHT_TOP].push(legend);
-	
+
 
     // heatmap
     heatmap = new google.maps.visualization.HeatmapLayer({
