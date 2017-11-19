@@ -135,7 +135,38 @@ var pinPopups = [];
 var n = pinNames.length;
 var lats = [42.028, 42.033, 42.0451, 42.0441, 42.038, 42.038, 42.032, 42.035, 42.039, 42.025, 42.027, 42.033, 42.040, 42.032, 42.035,   42.025, 42.036, 42.0454, 42.0444, 42.034, 42.035, 42.036, 42.030, 42.045, 42.044, 42.024, 42.031, 42.046, 42.035, 42.039];
 var lons = [-87.702, -87.705, -87.687, -87.677, -87.692, -87.695, -87.691, -87.681, -87.691, -87.699, -87.709, -87.695, -87.700, -87.682, -87.700,  -87.701, -87.706, -87.686, -87.678, -87.691, -87.696, -87.690, -87.682, -87.690, -87.698, -87.708, -87.690, -87.701, -87.681, -87.701];
-
+var icons = [
+    'hospitals.png',
+    'hospitals.png',
+    'firedept.png',
+    'rangerstation.png',
+    'landmarks-jp.png',
+    'hospitals.png',
+    'hospitals.png',
+    'firedept.png',
+    'landmarks-jp.png',
+    'snack_bar.png',
+    'landmarks-jp.png',
+    'snack_bar.png',
+    'landmarks-jp.png',
+    'firedept.png',
+    'rangerstation.png',
+    'hospitals.png',
+    'hospitals.png',
+    'firedept.png',
+    'rangerstation.png',
+    'landmarks-jp.png',
+    'hospitals.png',
+    'hospitals.png',
+    'firedept.png',
+    'landmarks-jp.png',
+    'snack_bar.png',
+    'landmarks-jp.png',
+    'snack_bar.png',
+    'landmarks-jp.png',
+    'firedept.png',
+    'rangerstation.png',
+]
 // document.getElementById("search-button").addEventListener("click", search);
 
 function search() {
@@ -195,195 +226,24 @@ var pinColor = "FE7569";
     var iconBase = 'http://maps.google.com/mapfiles/ms/micons/';
     var iconBase2 = 'http:// maps.google.com/mapfiles/kml/pal4/';
     var iconBase3 = 'http:// maps.google.com/mapfiles/kml/pal3/';
-    // var marker8 = new google.maps.Marker({
-    //     position: {lat: 42.0441, lng: -87.685},
-    //     map: map,
-    //     //icon: pinImage,
-    //     //animation: google.maps.Animation.DROP,
-    //     //icon: iconBase + 'parking_lot_maps.png'
-    //     icon: iconBase + 'orange-dot.png'
-    // });
-
 
 
 
     // pins
+    pins = []
+    pinPopups = []
+
     for (var i=0; i < n; i++) {
         pinPopups.push(new google.maps.InfoWindow())
+
+        pins.push(
+            new google.maps.Marker({
+                position: {lat: lats[i], lng: lons[i]},
+                map: map,
+                icon: iconBase + icons[i],
+            })
+        );
     };
-
-    var marker1 = new google.maps.Marker({
-        position: {lat: lats[0], lng: lons[0]},
-        map: map,
-        // icon: iconBase + 'orange-dot.png',
-         //icon: iconBase + 'firedept.png',
-         icon: iconBase + 'hospitals.png',
-         //icon: iconBase3 + 'icon38.png',
-        //icon: iconBase2 + 'icon55.png',
-    });
-    var marker2 = new google.maps.Marker({
-        position: {lat: lats[1], lng: lons[1]},
-        map: map,
-        icon: iconBase + 'hospitals.png',
-
-    });
-    var marker3 = new google.maps.Marker({
-        position: {lat: lats[2], lng: lons[2]},
-        map: map,
-        icon: iconBase + 'firedept.png',
-
-    });
-    var marker4 = new google.maps.Marker({
-        position: {lat: lats[3], lng: lons[3]},
-        map: map,
-        icon: iconBase + 'rangerstation.png',
-    });
-    var marker5 = new google.maps.Marker({
-        position: {lat: lats[4], lng: lons[4]},
-        map: map,
-        icon: iconBase + 'landmarks-jp.png',
-            //snack_bar
-    });
-    var marker6 = new google.maps.Marker({
-        position: {lat: lats[5], lng: lons[5]},
-        map: map,
-        icon: iconBase + 'hospitals.png',
-    });
-    var marker7 = new google.maps.Marker({
-        position: {lat: lats[6], lng: lons[6]},
-        map: map,
-        icon: iconBase + 'hospitals.png',
-    });
-    var marker8 = new google.maps.Marker({
-        position: {lat: lats[7], lng: lons[7]},
-        map: map,
-        icon: iconBase + 'firedept.png',
-    });
-    var marker9 = new google.maps.Marker({
-        position: {lat: lats[8], lng: lons[8]},
-        map: map,
-        icon: iconBase + 'landmarks-jp.png',
-    });
-    var marker10 = new google.maps.Marker({
-        position: {lat: lats[9], lng: lons[9]},
-        map: map,
-        icon: iconBase + 'snack_bar.png',
-    });
-    var marker11 = new google.maps.Marker({
-        position: {lat: lats[10], lng: lons[10]},
-        map: map,
-        icon: iconBase + 'landmarks-jp.png',
-    });
-    var marker12 = new google.maps.Marker({
-        position: {lat: lats[11], lng: lons[11]},
-        map: map,
-        icon: iconBase + 'snack_bar.png',
-    });
-    var marker13 = new google.maps.Marker({
-        position: {lat: lats[12], lng: lons[12]},
-        map: map,
-        icon: iconBase + 'landmarks-jp.png',
-    });
-    var marker14 = new google.maps.Marker({
-        position: {lat: lats[13], lng: lons[13]},
-        map: map,
-        icon: iconBase + 'firedept.png',
-    });
-    var marker15 = new google.maps.Marker({
-        position: {lat: lats[14], lng: lons[14]},
-        map: map,
-        icon: iconBase + 'rangerstation.png',
-    });
-
-
-
-
-    var marker16 = new google.maps.Marker({
-        position: {lat: lats[15], lng: lons[15]},
-        map: map,
-        // icon: iconBase + 'orange-dot.png',
-         //icon: iconBase + 'firedept.png',
-         icon: iconBase + 'hospitals.png',
-         //icon: iconBase3 + 'icon38.png',
-        //icon: iconBase2 + 'icon55.png',
-    });
-    var marker17 = new google.maps.Marker({
-        position: {lat: lats[16], lng: lons[16]},
-        map: map,
-        icon: iconBase + 'hospitals.png',
-
-    });
-    var marker18 = new google.maps.Marker({
-        position: {lat: lats[17], lng: lons[17]},
-        map: map,
-        icon: iconBase + 'firedept.png',
-
-    });
-    var marker19 = new google.maps.Marker({
-        position: {lat: lats[18], lng: lons[18]},
-        map: map,
-        icon: iconBase + 'rangerstation.png',
-    });
-    var marker20 = new google.maps.Marker({
-        position: {lat: lats[19], lng: lons[19]},
-        map: map,
-        icon: iconBase + 'landmarks-jp.png',
-            //snack_bar
-    });
-    var marker21 = new google.maps.Marker({
-        position: {lat: lats[20], lng: lons[20]},
-        map: map,
-        icon: iconBase + 'hospitals.png',
-    });
-    var marker22 = new google.maps.Marker({
-        position: {lat: lats[21], lng: lons[21]},
-        map: map,
-        icon: iconBase + 'hospitals.png',
-    });
-    var marker23 = new google.maps.Marker({
-        position: {lat: lats[22], lng: lons[22]},
-        map: map,
-        icon: iconBase + 'firedept.png',
-    });
-    var marker24 = new google.maps.Marker({
-        position: {lat: lats[23], lng: lons[23]},
-        map: map,
-        icon: iconBase + 'landmarks-jp.png',
-    });
-    var marker25 = new google.maps.Marker({
-        position: {lat: lats[24], lng: lons[24]},
-        map: map,
-        icon: iconBase + 'snack_bar.png',
-    });
-    var marker26 = new google.maps.Marker({
-        position: {lat: lats[25], lng: lons[25]},
-        map: map,
-        icon: iconBase + 'landmarks-jp.png',
-    });
-    var marker27 = new google.maps.Marker({
-        position: {lat: lats[26], lng: lons[26]},
-        map: map,
-        icon: iconBase + 'snack_bar.png',
-    });
-    var marker28 = new google.maps.Marker({
-        position: {lat: lats[27], lng: lons[27]},
-        map: map,
-        icon: iconBase + 'landmarks-jp.png',
-    });
-    var marker29 = new google.maps.Marker({
-        position: {lat: lats[28], lng: lons[28]},
-        map: map,
-        icon: iconBase + 'firedept.png',
-    });
-    var marker30 = new google.maps.Marker({
-        position: {lat: lats[29], lng: lons[29]},
-        map: map,
-        icon: iconBase + 'rangerstation.png',
-    });
-
-
-
-    pins = [marker1, marker2, marker3, marker4, marker5, marker6, marker7, marker8, marker9, marker10, marker11, marker12, marker13, marker14, marker15,  marker16, marker17, marker18, marker19, marker20, marker21, marker22, marker23, marker24, marker25, marker26, marker27, marker28, marker29, marker30];
 
     pins[0].addListener('click', function() {
         if (pinPopups[0].getMap()) {
