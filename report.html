@@ -41,6 +41,12 @@
 		<span id="level2">Immediately</span>
 	</div>
 
+	<form id="location">
+  		<input type="radio" name="location" checked> Current location<br>
+  		<input type="radio" name="location"> Other:
+	</form>	
+  	<input type="text" placeholder="Type address here..." id="customlocation">
+
 	<input type="text" placeholder="Optional: Describe your situation" id="details">
 
 	<button class="submit homebuttons" onclick="toastNotification()">Submit</button>

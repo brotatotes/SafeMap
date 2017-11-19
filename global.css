@@ -12,18 +12,20 @@
     border: 3px solid #000;
   }
 
-
-
-
 h3 {
 	text-align: center;
 	font-size: 500%;
+	width: 700px;
+	position: relative;
+	left: 130px;
 }
 
 p {
 	text-align: center;
-	font-size: 20px;
+	font-size: 250%;
 	color: gray;
+	position: relative;
+	top: 200px;
 }
 
 .head-bar {
@@ -39,10 +41,38 @@ p {
 	color: white;
 	font-size: 250%;
 	border: 2px solid white;
-	margin: 17% 5% 2% 5%;
+	margin: 25% 5% 2% 5%;
 	border-radius: 25px;
 	background-color: #41B7F2;
 	box-shadow: 3px 3px 5px gray;
+}
+
+.homebuttons-first{
+	text-align: center;
+	color: white;
+	font-size: 150%;
+	border: 2px solid white;
+	margin: 25% 5% 2% 5%;
+	border-radius: 25px;
+	background-color: #41B7F2;
+	box-shadow: 3px 3px 5px gray;
+	width: 500px;
+	position: relative;
+	left: 185px;
+}
+
+.homebuttons-second{
+	text-align: center;
+	color: white;
+	font-size: 150%;
+	border: 2px solid white;
+	margin: 5% 5% 2% 5%;
+	border-radius: 25px;
+	background-color: #41B7F2;
+	box-shadow: 3px 3px 5px gray;
+	width: 500px;
+	position: relative;
+	left: 185px;
 }
 
 .back-button {
@@ -67,11 +97,13 @@ p {
 	border-radius: 15px;
 	padding-bottom: 420px;
 	padding-left: 15px;
+	position: relative;
+	top: -80px;
 }
 
 .submit{
 	width: 80%;
-    margin: 10% 10%;
+    margin: -10% 10%;
 	background-color: #41B7F2;
 	color: white;
 	text-align: center;
@@ -99,7 +131,21 @@ p {
 	margin-top: 10%;
 }
 
+#location {
+	position: relative;
+	left: 300px;
+	top: 30px;
+	font-size: 30px;
+	width: 500px;
+}
 
+#customlocation {
+	border: 1px solid black;
+	font-size: 150%;
+	position: relative;
+	left: 420px;
+	top: -32px;
+}
 
 /* slider colors */
 
@@ -366,7 +412,7 @@ input[type=range]::-moz-range-thumb:active {
 /* submit toast notification */
 #snackbar {
     visibility: hidden;
-    min-width: 250px;
+    min-width: 700px;
     margin-left: -170px;
     background-color: #333;
     color: #fff;
@@ -375,9 +421,9 @@ input[type=range]::-moz-range-thumb:active {
     padding: 16px;
     position: fixed;
     z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 30px;
+    bottom: 800px;
+    left: 290px;
+    font-size: 60px;
 	display: flex;
 	justify-content: center;
 }
@@ -390,12 +436,12 @@ input[type=range]::-moz-range-thumb:active {
 
 @-webkit-keyframes fadein {
     from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
+    to {bottom: 800px; opacity: 1;}
 }
 
 @keyframes fadein {
     from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
+    to {bottom: 800px; opacity: 1;}
 }
 
 @-webkit-keyframes fadeout {
