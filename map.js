@@ -674,7 +674,7 @@ var pinColor = "FE7569";
 	 //var div = document.createElement('div');
 	 //div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/snack_bar.png' + '"> ' + 'Food-Water Demand';
 	 var div = document.createElement('div');
-	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/snack_bar.png' + '"> ' + 'Safe';
+	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/snack_bar.png' + '"> ' + 'Food-Water Shortage';
 	 //var div = document.createElement('div');
 	 //div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/rangerstation.png' + '"> ' + 'Safe';
 	 
