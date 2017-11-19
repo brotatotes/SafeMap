@@ -382,17 +382,6 @@ var pinColor = "FE7569";
     });
 
 
-
-
-
-
-
-
-
-
-
-
-
     
     pins = [marker1, marker2, marker3, marker4, marker5, marker6, marker7, marker8, marker9, marker10, marker11, marker12, marker13, marker14, marker15,  marker16, marker17, marker18, marker19, marker20, marker21, marker22, marker23, marker24, marker25, marker26, marker27, marker28, marker29, marker30];
 
@@ -672,6 +661,36 @@ var pinColor = "FE7569";
     }); 
 
 
+	var legend = document.getElementById('legend');
+	 var div = document.createElement('div');
+	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/firedept.png' + '"> ' + 'Fire Accident';
+	 legend.appendChild(div);
+	 var div = document.createElement('div');
+	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/hospitals.png' + '"> ' + 'Medical Emergency';
+     legend.appendChild(div);
+	 var div = document.createElement('div');
+	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/landmarks-jp.png' + '"> ' + 'House Collapse';
+	 legend.appendChild(div);
+	 //var div = document.createElement('div');
+	 //div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/snack_bar.png' + '"> ' + 'Food-Water Demand';
+	 var div = document.createElement('div');
+	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/snack_bar.png' + '"> ' + 'Safe';
+	 //var div = document.createElement('div');
+	 //div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/rangerstation.png' + '"> ' + 'Safe';
+	 
+     legend.appendChild(div);
+ /*       for (var key in icons) {
+          var type = icons[key];
+          var name = type.name;
+          var icon = type.icon;
+          var div = document.createElement('div');
+          div.innerHTML = '<img src="' + icon + '"> ' + name;
+          legend.appendChild(div);
+		 
+        }*/
+
+        map.controls[google.maps.ControlPosition.RIGHT_TOP].push(legend);
+	
 
     // heatmap
     heatmap = new google.maps.visualization.HeatmapLayer({
