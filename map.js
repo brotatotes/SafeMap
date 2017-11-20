@@ -135,6 +135,8 @@ var pinPopups = [];
 var n = pinNames.length;
 var lats = [42.028, 42.033, 42.0451, 42.0441, 42.038, 42.038, 42.032, 42.035, 42.039, 42.025, 42.027, 42.033, 42.040, 42.032, 42.035,   42.025, 42.036, 42.0454, 42.0444, 42.034, 42.035, 42.036, 42.030, 42.045, 42.044, 42.024, 42.031, 42.046, 42.035, 42.039];
 var lons = [-87.702, -87.705, -87.687, -87.677, -87.692, -87.695, -87.691, -87.681, -87.691, -87.699, -87.709, -87.695, -87.700, -87.682, -87.700,  -87.701, -87.706, -87.686, -87.678, -87.691, -87.696, -87.690, -87.682, -87.690, -87.698, -87.708, -87.690, -87.701, -87.681, -87.701];
+
+var iconBase = 'http://maps.google.com/mapfiles/ms/micons/';
 var icons = [
     'hospitals.png',
     'hospitals.png',
@@ -167,7 +169,7 @@ var icons = [
     'firedept.png',
     'rangerstation.png',
 ]
-// document.getElementById("search-button").addEventListener("click", search);
+
 
 function search() {
     console.clear();
@@ -205,8 +207,12 @@ function search() {
     }
 }
 
+function getIcon(i) {
+    return iconBase + icons[i];
+}
+
 function getText(i) {
-    return pinNames[i] + " " + pinCrises[i] + " at " + pinAddrs[i] + ":<br/>" + pinDescs[i];
+    return '<h2><img class="iconimg" src="' + getIcon(i) + '"/> ' + pinAddrs[i] + "</h2>" + pinNames[i] + " " + pinCrises[i] + ": " + pinDescs[i];
 }
 
 function initMap() {
@@ -222,12 +228,6 @@ function initMap() {
     new google.maps.Size(29, 54),
     new google.maps.Point(0,0),
     new google.maps.Point(10, 34));
-    //var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-    var iconBase = 'http://maps.google.com/mapfiles/ms/micons/';
-    var iconBase2 = 'http:// maps.google.com/mapfiles/kml/pal4/';
-    var iconBase3 = 'http:// maps.google.com/mapfiles/kml/pal3/';
-
-
 
     // pins
     pins = []

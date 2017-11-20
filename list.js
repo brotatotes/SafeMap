@@ -1,4 +1,4 @@
-var iconBase = 'http://maps.google.com/mapfiles/ms/micons/';
+
 // wait for html to load before running init:
 window.onload = init;
 
@@ -26,13 +26,8 @@ function updateList(results) {
     list.innerHTML += '</ul>';
 }
 
-function getIcon(i) {
-    return iconBase + icons[i];
-}
-
 function getItemHTML(i) {
-    console.log(getIcon(i));
-    return '<div class="listitembox"><li class="listitem"><img height="5%" src="' + getIcon(i) + '"/><br/>' + getText(i) + '</li></div>';
+    return '<div class="listitembox">' + getText(i) + '</li></div>';
 }
 
 function searchList() {

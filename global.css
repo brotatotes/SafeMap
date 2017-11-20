@@ -167,7 +167,7 @@ input[type=range]::-webkit-slider-runnable-track {
   background: -ms-linear-gradient(45deg, green 0%, yellow 51%, red 100%);
   background: linear-gradient(45deg, green 0%, yellow 51%, red 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=green, endColorstr=red, GradientType=1 );
-  
+
 /*  background: rgba(59,173,227,1);
   background: -moz-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
   background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,173,227,1)), color-stop(25%, rgba(87,111,230,1)), color-stop(51%, rgba(152,68,183,1)), color-stop(100%, rgba(255,53,127,1)));
@@ -407,6 +407,14 @@ input[type=range]::-moz-range-thumb:active {
 	padding: 0px 10px;
 	position: relative;
 	top: 120px;
+}
+
+.iconimg {
+	height:250%;
+}
+
+.listitembox .iconimg {
+	height:5%;
 }
 
 /* submit toast notification */
