@@ -524,23 +524,23 @@ function initMap() {
 	var legend = document.getElementById('legend');
 
 	 var div = document.createElement('div');
-	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/firedept.png' + '"> ' + 'Fire Accident';
+	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/firedept.png' + '" style="height:18%;"> ' + 'Fire Accident';
 	 legend.appendChild(div);
 
 	 var div = document.createElement('div');
-	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/hospitals.png' + '"> ' + 'Medical Emergency';
+	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/hospitals.png' + '" style="height:18%;"> ' + 'Medical Emergency';
      legend.appendChild(div);
 
 	 var div = document.createElement('div');
-	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/landmarks-jp.png' + '"> ' + 'House Collapse';
+	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/landmarks-jp.png' + '" style="height:18%;"> ' + 'House Collapse';
 	 legend.appendChild(div);
 
 	 var div = document.createElement('div');
-	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/snack_bar.png' + '"> ' + 'Food-Water Shortage';
+	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/snack_bar.png' + '" style="height:18%;"> ' + 'Food-Water Shortage';
      legend.appendChild(div);
 
 	 var div = document.createElement('div');
-	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/rangerstation.png' + '"> ' + 'Safe';
+	 div.innerHTML = '<img src="' + 'http://maps.google.com/mapfiles/ms/micons/rangerstation.png' + '" style="height:18%;"> ' + 'Safe';
      legend.appendChild(div);
  /*       for (var key in icons) {
           var type = icons[key];
